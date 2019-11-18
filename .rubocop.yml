@@ -1,0 +1,10 @@
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - x
+    - 'y'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never

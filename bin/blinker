@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+lib_path = File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift(lib_path) unless $LOAD_PATH.include?(lib_path)
+
+require 'game_of_life'
+
+grid = [
+  [false, false, false, false, false],
+  [false, false, false, false, false],
+  [false, true, true, true, false],
+  [false, false, false, false, false],
+  [false, false, false, false, false]
+]
+world = GameOfLife::World.new(grid)
+
+loop do
+  world.draw
+  world = world.next
+  sleep 0.5
+end
